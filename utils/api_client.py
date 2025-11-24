@@ -2,7 +2,8 @@
 
 from typing import Any, Dict, List, Optional
 import requests
-from error_handler import log_error
+from utils.error_handler import log_error
+
 
 def fetch_api_data(url: str, headers: Optional[Dict[str, str]] = None) -> List[Dict[str, Any]]:
     """
@@ -24,3 +25,4 @@ def fetch_api_data(url: str, headers: Optional[Dict[str, str]] = None) -> List[D
         log_error(f"API failed for URL: {url}", e)
         print(f"ERROR calling {url}. See error.log.")
         return []
+
