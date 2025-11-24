@@ -8,7 +8,8 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email import encoders
 
-from error_handler import log_error
+from utils.error_handler import log_error
+
 
 def send_email_with_attachments(
     smtp_host: str,
@@ -57,3 +58,4 @@ def send_email_with_attachments(
     except Exception as e:
         log_error("EMAIL SEND FAILED", e)
         print("Email sending error. Check error.log")
+
