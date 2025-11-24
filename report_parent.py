@@ -3,11 +3,12 @@
 import os
 from typing import Dict
 
-from error_handler import LOG_FILE
-from api_client import fetch_api_data
-from excel_utils import create_excel
-from email_body import build_email_body
-from email_sender import send_email_with_attachments
+from utils.error_handler import LOG_FILE
+from utils.api_client import fetch_api_data
+from utils.excel_utils import create_excel
+from utils.email_body import build_email_body
+from utils.email_sender import send_email_with_attachments
+
 
 def get_env(name: str, default: str | None = None, required: bool = False) -> str | None:
     """Simple helper to read environment variables with optional required flag."""
@@ -73,3 +74,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
